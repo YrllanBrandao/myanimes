@@ -1,0 +1,382 @@
+.btn-home{
+    height: 30px;
+    width: 30px;
+    background: url('https://api.iconify.design/ic/round-home.svg?color=%23e9e8e8&width=30&height=30') no-repeat center center / contain;
+}
+.btn-home:hover{
+    background: url('https://api.iconify.design/ic/round-home.svg?color=%234e31aa&width=30&height=30') no-repeat center center / contain;
+}
+.btn-random {
+    background: url('https://api.iconify.design/mdi/dice-multiple.svg?color=%23e9e8e8&width=30&height=30') no-repeat center center / contain;
+    width: 30px;
+    height: 30px;
+}
+
+.btn-random:hover {
+    background: url('https://api.iconify.design/mdi/dice-multiple.svg?color=%234e31aa&width=30&height=30') no-repeat center center / contain;
+}
+#search-icon{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background: url('https://api.iconify.design/fluent/search-12-filled.svg?color=%23e9e8e8&width=30&height=30') no-repeat center center / contain;
+}
+#search-icon:hover{
+    background: url('https://api.iconify.design/fluent/search-12-filled.svg?color=%234e31aa&width=30&height=30') no-repeat center center / contain;
+}
+
+.menu-profile{
+    height: calc(var(--vh)/18);
+    width: calc(var(--vh)/18);
+    border-radius: 50%;
+    position: relative;
+}
+
+.mobile-only{
+    display: none;
+}
+
+header {
+    position: fixed;
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 10px;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    font-family: var(--defaultFont);
+}
+
+
+
+.navbar-brand-anchor {
+    background: url("https://i.postimg.cc/SxQ9zc0s/My-animes-2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 60px;
+    width: 200px;
+}
+
+#btn-login:hover {
+    color: #4e31aa;
+}
+
+/* break points */
+/* extra small devices */
+@media (max-width: 575px) {
+    .navbar-brand {
+        background: url("https://i.postimg.cc/SxQ9zc0s/My-animes-2.png");
+        background-size: 80% 70%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: 60px;
+        width: 170px;
+        position: relative;
+    
+    }
+    .mobile-only {
+        display: flex;
+        align-items: center;
+        height: auto;
+        z-index: 99;
+    }
+
+    .btn {
+        min-width: 200px;
+        width: auto;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        gap: 4px;
+        padding: 20px;
+    }
+
+    .nav-list {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        justify-content: start;
+        align-items: center;
+        gap: 20px;
+        font-size: 16px;
+        padding: 25px;
+        font-family: var(--defaultFont);
+        transform: translateX(-100%);
+        transition: all .3s ease-in-out;
+    }
+
+    .nav-list.active {
+        transform: translateX(0);
+        background: linear-gradient(rgba(0, 0, 0, .75) 0, #222222b0 100%);
+        transition: all .3s ease-in-out;
+    }
+
+    /* toogle icon */
+
+    .btn-toggle {
+        border-radius: 5px;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #cdcccc;
+        position: relative;
+        height: 30px;
+        width: 30px;
+        
+    }
+    .btn-toggle.hidden{
+        visibility: hidden;
+    }
+    
+
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767px) {
+    .navbar-brand {
+        background: url("https://i.postimg.cc/SxQ9zc0s/My-animes-2.png");
+        background-size: 80% 70%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: 60px;
+        width: 170px;
+        position: relative;
+    
+    }
+    .mobile-only {
+        display: flex;
+        align-items: center;
+        height: auto;
+        z-index: 99;
+    }
+
+    .btn {
+        min-width: 200px;
+        width: auto;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        gap: 4px;
+        padding: 20px;
+    }
+
+    .nav-list {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        justify-content: start;
+        align-items: center;
+        gap: 20px;
+        font-size: 16px;
+        padding: 25px;
+        font-family: var(--defaultFont);
+        transform: translateX(-100%);
+        transition: all .3s ease-in-out;
+    }
+
+    .nav-list.active {
+        transform: translateX(0);
+        background: linear-gradient(rgba(0, 0, 0, .75) 0, #222222b0 100%);
+        transition: all .3s ease-in-out;
+    }
+
+    /* toogle icon */
+
+    .btn-toggle {
+        border-radius: 5px;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #cdcccc;
+        z-index: 99;
+        position: relative;
+    }
+    .btn-toggle.btn-toggle.hidden{
+        visibility: hidden;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    header{
+        display: flex;
+        align-items: center;
+    }
+    .navbar-brand {
+        background: url("https://i.postimg.cc/SxQ9zc0s/My-animes-2.png");
+        background-size: 80% 70%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: 60px;
+        width: 170px;
+        position: relative;
+    
+    }
+    .nav-list {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        font-size: 16px;
+        padding: 25px;
+        font-family: var(--defaultFont);
+    }
+
+    .nav-list li {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        height: 100%;
+        letter-spacing: 1px;
+    }
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .navbar-brand {
+        background: url("https://i.postimg.cc/SxQ9zc0s/My-animes-2.png");
+        background-size: 80% 70%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: 60px;
+        width: 170px;
+        position: absolute;
+    
+    }
+    .nav-list {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: start;
+        gap: 20px;
+        font-size: 16px;
+        padding: 25px;
+        font-family: var(--defaultFont);
+        
+    }
+
+    .nav-list li {
+        flex-direction: row;
+        align-items: center;
+        height: 100%;
+        letter-spacing: 1px;
+        z-index: 99;
+    }
+    
+
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .navbar-brand {
+        background: url("https://i.postimg.cc/SxQ9zc0s/My-animes-2.png");
+        background-size: 80% 70%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: 60px;
+        width: 170px;
+        position: absolute;
+    
+    }
+    .nav-list {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        font-size: 16px;
+        padding: 25px;
+        font-family: var(--defaultFont);
+
+    }
+
+    .nav-list li {
+        flex-direction: row;
+        align-items: center;
+        height: 100%;
+        letter-spacing: 1px;
+        z-index: 99;
+    }
+    .nav-list li a{
+        height: 100%;   
+    }
+
+    .btn-dropdown {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        padding: 0 5px;
+        cursor: pointer;
+        color: #d2d1d3;
+        font-family: var(--defaultFont);
+        font-weight: 400;
+    }
+
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1200px) {
+    .navbar-brand {
+        background: url("https://i.postimg.cc/SxQ9zc0s/My-animes-2.png");
+        background-size: 80% 70%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: 60px;
+        width: 170px;
+        position: absolute;
+    
+    }
+    .nav-list {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        font-size: 16px;
+        padding: 25px;
+        font-family: var(--defaultFont);
+       
+    }
+
+    .nav-list li {
+        flex-direction: row;
+        align-items: center;
+        height: 100%;
+        letter-spacing: 1px;
+    }
+}

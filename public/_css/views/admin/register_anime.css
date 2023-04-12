@@ -1,0 +1,54 @@
+:root {
+    --bg-url: "https://images6.alphacoders.com/656/656029.png";
+}
+
+body {
+    background: url("https://images6.alphacoders.com/656/656029.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.text-area {
+    position: relative;
+}
+
+#text-length {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0 10px 10px 0;
+}
+
+
+
+input[type='checkbox']{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+input[type='checkbox']:checked::before{
+    position: absolute;
+    content: 'X';
+    color: var(--color-theme);
+    font-weight: bold;
+    align-self: center;
+}
+input[type='checkbox']::after{
+    content: '';
+    background: #fff;
+    padding: 10px;
+    border-radius: 3px;
+}
+input ~ label{
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+input:checked ~ label{
+    
+    color: #fff;
+    
+}

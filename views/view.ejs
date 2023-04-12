@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../../_css/views/player.css">
+    <link rel="stylesheet" href="../../_css/views/view.css">
+    <link rel="stylesheet" href="../../_css/views/components.css">
+
+    <title>Assistir Overlord - Episódio 12</title>
+</head>
+
+<body>
+   
+
+    <video src="<%= videoUrl %>" id="anotherPlayer" class="hiddenPlayer"></video>
+
+    <%- include("./partials/preloading.ejs") %>
+ 
+
+
+    <canvas id="anime-thumb"></canvas>
+    <div class="container-fluid bg-overlay d-flex justify-content-center align-items-center">
+        
+       
+        
+            
+        <main class="container-one-view d-flex flex-column align-items-center justify-content-center">
+            <%- include("partials/menu.ejs") %>
+            <%- include("partials/player.ejs") %>
+            <input type="hidden" id="videoUrl" value="<%= videoUrl %>">
+        </main>
+        <!-- comments area -->
+
+
+        <!-- footer -->
+        <footer class="fs-5 fw-bold text-center text-light">
+            Yrllan Brandão &copy; 2023
+        </footer>
+
+    </div>
+   
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <script src="../../_javascript/player.js" type="module"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+ 
+    <script src="../../_javascript/player.js" type="module"></script>
+    <script src="../../_javascript/components.js" type="module" ></script>
+</body>
+
+</html>

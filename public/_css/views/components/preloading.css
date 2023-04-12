@@ -1,0 +1,12 @@
+.preloading{
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.459) 0, #0a0a0a50 100%);
+    position: fixed;
+    z-index: 9999;
+    transition: opacity 500ms;
+}
+.preloading.disabled{
+    opacity: 0;
+    display: none;
+}

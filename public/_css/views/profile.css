@@ -1,0 +1,19 @@
+:root{
+    --bg-url: "https://images7.alphacoders.com/122/1221095.jpg";
+}
+body{
+    background: url("https://images7.alphacoders.com/122/1221095.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.profile-picture{
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+}
+
+.options{
+    width: 100%;
+}

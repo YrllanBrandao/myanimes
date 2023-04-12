@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./_css/views/components.css">
+    <link rel="stylesheet" href="./_css/views/register.css">
+    <title>Registre-se agora na My Animes</title>
+</head>
+<body>
+    <%- include("../partials/preloading.ejs") %>
+    <div class="overlay">
+
+    </div>
+    <div class="container-one-view d-flex flex-row justify-content-center align-items-center gap-1">
+
+        <%- include("../partials/menu.ejs")%>
+        <div class="area-01 d-flex flex-column align-items-center justify-content-center">
+            <p class="fs-w fw-bold light p-register">
+                Crie uma conta gratuitamente para uma melhor experiência <br>
+                Já tem uma conta? faça <a href="/login" class="focus text-black text-underline decoration-white fw-bolder text-scale">login</a>
+            </p>
+            
+    
+        </div>
+
+        <form  method="post" class="form d-flex flex-column gap-1" id="formLogin">
+            <label for="nicknameInput" class="form-label">Nickname</label>
+            <input type="text" class="form-control" name="nickname" id="inputNickname" maxlength="13" placeholder="seus usuário (Nickname)" autocapitalize="false">
+            <!-- email -->
+           <label for="inputEmail" class="form-label">
+            Email
+           </label>
+           <input type="email" name="email" id="inputEmail" class="form-control" title="Insira seu melhor e-mail" placeholder="seu e-mail">
+           <!-- password section-->
+           <label for="password" class="form-label">Password</label>
+           <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Sua senha" title="insira uma senha forte">
+           
+           <label for="password" class="form-label">Password</label>
+           <input type="password"  id="passwordConfirm" class="form-control" placeholder="Confirma sua senha" title="Confirme sua senha">
+         
+           <p class="fs-6 text-light">
+            Ao se registrar, você aceita nossos termos de uso e a nossa <a href="#" class="link-theme">política de privacidade</a>.
+           </p>
+           <!-- submit section -->
+           <button type="submit" class="btn btn-theme" disabled id="submitButton">
+            Entrar
+           </button>
+
+        </form>
+
+
+
+
+
+    </div>
+
+    <!-- scripts -->
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.4/axios.min.js"
+        integrity="sha512-LUKzDoJKOLqnxGWWIBM4lzRBlxcva2ZTztO8bTcWPmDSpkErWx0bSP4pdsjNH8kiHAUPaT06UXcb+vOEZH+HpQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+        integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- toastr -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" integrity="sha512-vKMx8UnXk60zUwyUnUPM3HbQo8QfmNx7+ltw8Pm5zLusl1XIfwcxo8DbWCqMGKaWeNxWA8yrx5v3SaVpMvR3CA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <!-- own scripts -->
+    <script src="./_javascript/components.js" type="module"></script>
+    <script src="./_javascript/components/form_register.js" type="module"></script>
+
+    
+</body>
+</html>

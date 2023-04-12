@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../_css/views/components.css">
+    <link rel="stylesheet" href="../_css/views/admin/register_anime.css">
+    <title>My animes - Página inicial</title>
+</head>
+
+<body>
+
+    <%- include("../partials/preloading.ejs") %>
+  <div class="overlay"></div>
+        <!-- content -->
+        <div class="container-one-view d-flex flex-row justify-content-center align-items-center">
+            <%- include("../partials/menu.ejs") %>
+
+                
+              <form  class="form">
+                <label for="" class="form-label" maxlength="10">Titulo</label>
+                <input type="text" name="tile" id="title" class="form-control checkFild" minlength="1" required maxlength="50">
+
+
+                <label for="seasons" class="form-label">Número de temporadas</label>
+                <input type="number" name="seasons" id="seasons" min="0" max="50" class="form-control checkFild" value="1" required maxlength="3">
+
+                <label for="author" class="form-label ">Author</label>
+                <input type="text" name="author" id="author" minlength="1"  class="form-control checkFild" maxlength="50" required>
+
+                <label for="synopsis" class="form-label">Sinopse</label>
+                <div class="text-area">
+                    <textarea name="synopsis" id="synopsis" cols="30" rows="5" class="form-control checkFild" minlength="1"  required maxlength="300"></textarea>
+                    <span id="text-length">
+                        0
+                    </span>
+                </div>
+
+                <label for="coverUrl" class="form-label">Imagem de capa(URL)</label>
+                <input type="text" name="coverUrl" id="coverUrl" class="form-control checkFild" minlength="4" maxlength="120" required>
+
+                <div class="container-fluid p-1 d-flex   fs-6 text-light">
+                    <div class="container-fluid d-flex semi-gap">
+                        <input type="checkbox" name="animeType" id="subtitled">
+                    <label for="subtitled">Legendado</label>
+                    </div>
+                    <div class="container-fluid d-flex semi-gap">
+                        <input type="checkbox" name="animeType" id="dubbed">
+                    <label for="dubbed">Dublado</label>
+                    </div>
+                </div>
+               
+              
+                <button class="btn bg-theme my-1" id="registerButton">
+                    Registrar
+                </button>
+              </form>
+
+
+
+        </div>
+        <!-- scripts -->
+        <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.4/axios.min.js"
+            integrity="sha512-LUKzDoJKOLqnxGWWIBM4lzRBlxcva2ZTztO8bTcWPmDSpkErWx0bSP4pdsjNH8kiHAUPaT06UXcb+vOEZH+HpQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- jQuery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+            integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- toastr -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"
+            integrity="sha512-vKMx8UnXk60zUwyUnUPM3HbQo8QfmNx7+ltw8Pm5zLusl1XIfwcxo8DbWCqMGKaWeNxWA8yrx5v3SaVpMvR3CA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"
+            integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <!-- own scripts -->
+        <script src="../_javascript/admin/checkLength.js" type="module"></script>
+        <script src="../_javascript/components.js" type="module"></script>
+      
+
+</body>
+
+</html>

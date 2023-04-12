@@ -1,0 +1,90 @@
+<div class="video-player mx-auto" id="video-player">
+    <!-- video player -->
+    <div class="player-overlay">
+
+    </div>
+    <video id="player" src="">
+
+        <!-- <source src="" type="video/mp4"> -->
+        Your browser does not support HTML5 video.
+    </video>
+
+    <div class="player-controls">
+
+        <div class="timeline">
+            <!-- <input type="range" id="timeline" value="0" max="100" min="0"> -->
+            <progress id="timeline" max="100" value="0"></progress>
+        </div>
+
+
+        <div class="controls-player gap">
+            <button id="play-button" class="tooltip btn-ui" data-name="play">
+
+            </button>
+
+            <!-- volume button -->
+            <div class=" tooltip btn-ui" data-name="volume" id="volume-button">
+
+            </div>
+            <input type="range" id="range-volume" min="0" max="1" step="0.1" value="100">
+
+            <!-- next +85s -->
+            <button class="tooltip btn-ui " id="skip-intro" data-name="skip intro">
+
+            </button>
+
+            <!-- current time / full time  -->
+            <div id="current-time">
+                00:00 / 00:00
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+</div>
+
+<!-- controls episodes -->
+
+<div class="controls d-flex justify-content-around align-items-center mx-auto">
+
+    <a href="/animes/overlord-dublado/episodio-12" class="control-item d-flex justify-content-center tooltip" data-name="Episódio anterior">
+        <span class="iconify" data-icon="fluent:arrow-previous-24-filled" style="color: #6a4cc8;" data-width="30"
+            data-height="30"></span>
+
+    </a>
+
+    <a href="/" class="control-item d-flex justify-content-center tooltip" data-name="Lista de episódios">
+        <span class="iconify" data-icon="ph:list-fill" style="color: #6a4cc8;" data-width="30" data-height="30"></span>
+    </a>
+
+    <a href="/animes/overlord-dublado/episodio-13" class="control-item d-flex justify-content-center tooltip" data-name="Próximo Episódio">
+
+        <span class="iconify" data-icon="fluent:arrow-next-24-filled" style="color: #6a4cc8;" data-width="30"
+            data-height="30"></span>
+    </a>
+
+</div>
+<!-- video extra area -->
+<div class="video-description mx-auto d-flex flex-column gap-1">
+    <h2 class="fs-title">
+        Overlord
+    </h2>
+    <h3 class="fs-6 fw-5">
+        * episódio 12 - The final Battle of the disturbance
+    </h3>
+
+    <div class="d-flex flex-column">
+        <div class="d-flex align-items-center flex-row fs-6 fw-bold">
+            <span class="iconify" data-icon="mdi:information-variant-box" style="color: #553f9f;"
+                data-width="20"></span>
+            <span>Sinopse</span>
+        </div>
+        <p class="fs-6 p-1 lh-2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere et quia nam rem perferendis laudantium modi.
+            Voluptates, laboriosam dolorum! Dolore iusto quos molestias dolores et quae voluptas, in qui sapiente?
+        </p>
+    </div>
+</div>

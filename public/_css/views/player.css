@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap');
+
+:root {
+    --defaultFont: 'Poppins', sans-serif;
+    --spacer: 1rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#anime-thumb{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    
+}
+
+/* width */
+
+#skip-intro {
+    background: url('https://api.iconify.design/fluent/skip-forward-tab-20-filled.svg?color=%236a4cc8&width=30&height=30') no-repeat center center / contain;
+    height: 30px;
+    width: 30px;
+}
+
+
+@media only screen and (max-width: 767px) {
+
+    .video-top {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .video-player {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: 90vw;
+        background: #191825;
+        border-radius: 10px;
+        z-index: 99;
+        position: relative;
+        justify-content: center;
+
+    }
+
+    .video-player::after {
+        content: url('https://api.iconify.design/line-md/loading-twotone-loop.svg?color=%234e31aa&width=30&height=30');
+        height: 30px;
+        width: 30px;
+        position: absolute;
+        left: 49%;
+    }
+
+    .video-player.loaded::after {
+        content: none;
+    }
+
+    .video-description {
+        z-index: 101;
+        width: 50vw;
+        height: auto;
+        padding: 10px;
+    }
+
+    #player {
+        width: 100%;
+        height: 50vh;
+        border-radius: 10px 10px 0 0;
+        border: 2px solid #191825;
+        background: #000;
+        cursor: pointer;
+    }
+
+
+    .player-controls {
+        display: none;
+        flex-direction: column;
+        position: relative;
+        width: 100%;
+        height: 60px;
+        transition: all 1s ease-in-out;
+
+        align-self: flex-start;
+        padding: 2px 5px;
+        margin-top: -60px;
+    }
+
+
+    .controls {
+        width: 90vw;
+        height: 50px;
+        background: #191825;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        z-index: 100;
+    }
+
+    .controls-player {
+        display: flex;
+        padding: 0 2px;
+        width: 100%;
+        height: 40px;
+        align-items: center;
+    }
+
+    .control-item {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    .control-item:hover {
+        background: #2c2c41;
+        transition: all .4s ease-in;
+    }
+
+    #timeline {
+        width: 100%;
+        height: 5px;
+        color: #191825;
+        background: #20262E;
+        cursor: pointer;
+
+    }
+
+    #timeline::-webkit-progress-value {
+        background: #865dff;
+    }
+
+    #current-time {
+        font-weight: bold;
+        color: #E9E8E8;
+    }
+
+    #volume-button {
+        background: url('https://api.iconify.design/material-symbols/volume-mute-rounded.svg?color=%236a4cc8&width=30&height=30') no-repeat center center / contain;
+        height: 30px;
+        width: 30px;
+    }
+
+    .btn-icon {
+        background: none;
+        border: none;
+    }
+
+    #range-volume {
+        appearance: none;
+        display: none;
+        height: 3px;
+        width: 80px;
+        background: #E9E8E8;
+        accent-color: #865dff;
+        transition: opacity 1s ease-in-out;
+        cursor: pointer;
+    }
+
+    #play-button {
+        background: url('https://api.iconify.design/material-symbols/play-arrow-rounded.svg?color=%236a4cc8&width=30&height=30') no-repeat center center / contain;
+    }
+
+    #play-button.paused {
+        background: url('https://api.iconify.design/material-symbols/pause-rounded.svg?color=%236a4cc8&width=30&height=30') no-repeat center center / contain;
+    }
+
+
+}
+
+
+
+
+@media only screen and (min-width: 768px) {
+
+    .video-top {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .video-player {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: 50vw !important;
+        background: #191825;
+        border-radius: 10px;
+        z-index: 99;
+        position: relative;
+        justify-content: center;
+       
+    }
+
+
+    
+
+    .video-description {
+        z-index: 101;
+        width: 50vw;
+        height: auto;
+        padding: 10px;
+        color: #cccccc;
+    }
+
+    #player {
+        width: 100%;
+        height: 50vh;
+        border-radius: 10px 10px 0 0;
+        border: 2px solid #191825;
+        background: #000;
+        cursor: pointer;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       
+    }
+    
+    .player-controls {
+        display: none;
+        flex-direction: column;
+        position: relative;
+        width: 100%;
+        height: 60px;
+        transition: all 1s ease-in-out;
+
+        align-self: flex-start;
+        padding: 2px 5px;
+        margin-top: -60px;
+    }
+    .player-overlay{
+        position: absolute;
+        width: 100%;
+        height: 50vh;
+        background: #000000;
+        z-index: 99;
+        border-radius: 10px 10px 0 0;
+        border: 2px solid #20262E;
+    }
+    .player-overlay::after {
+        content: url('https://api.iconify.design/line-md/loading-twotone-loop.svg?color=%234e31aa&width=30&height=30');
+        height: 30px;
+        width: 30px;
+        position: absolute;
+        left: 49%;
+        top: 50%;
+    }
+    .player-overlay.loaded::after {
+
+        content: none;
+    }
+
+
+    .controls {
+        width: 100%;
+        height: 50px;
+        background: #191825;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        z-index: 100;
+    }
+
+    .controls-player {
+        display: flex;
+        padding: 0 10px;
+        width: 100%;
+        height: 40px;
+        align-items: center;
+
+    }
+
+    .control-item {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    .control-item:hover {
+        background: #2c2c41;
+        transition: all .4s ease-in;
+    }
+
+    #timeline {
+        width: 100%;
+        height: 5px;
+        color: #191825;
+        background: #20262E;
+        cursor: pointer;
+        
+    }
+
+    #timeline::-webkit-progress-value {
+        background: #865dff;
+    }
+
+    #current-time {
+        font-weight: bold;
+        color: #E9E8E8;
+    }
+
+    #volume-button {
+        background: url('https://api.iconify.design/material-symbols/volume-mute-rounded.svg?color=%236a4cc8&width=30&height=30') no-repeat center center / contain;
+        height: 30px;
+        width: 30px;
+    }
+
+    .btn-icon {
+        background: none;
+        border: none;
+    }
+
+    #range-volume {
+        appearance: none;
+        display: none;
+        height: 3px;
+        width: 80px;
+        background: #E9E8E8;
+        accent-color: #865dff;
+        transition: opacity 1s ease-in-out;
+        cursor: pointer;
+    }
+    
+    #play-button {
+        background: url('https://api.iconify.design/material-symbols/play-arrow-rounded.svg?color=%236a4cc8&width=30&height=30') no-repeat center center / contain;
+    }
+
+    #play-button.paused {
+        background: url('https://api.iconify.design/material-symbols/pause-rounded.svg?color=%236a4cc8&width=30&height=30') no-repeat center center / contain;
+    }
+
+    .video-player {
+        width: 50vw;
+        
+    }
+
+    .controls {
+        width: 50vw;
+    }
+
+    .btn {
+        width: 140px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        gap: 4px;
+
+    }
+
+    .bg-ui {
+        background: #4E31AA;
+    }
+
+    .bg-ui:hover {
+        background: #3A1078;
+    }
+
+   
+
+    .comments-area{
+        width: 100%;
+
+        margin-top: 10vh;
+        z-index: 99;
+    }
+
+
+}
+
+@media only screen and (min-width: 1280px) {
+    .video-player {
+        width: 80vw;
+    }
+}

@@ -1,0 +1,17 @@
+:root{
+    --bg-url: "https://images2.alphacoders.com/113/113972.jpg"
+    /* --bg-url: "https://images6.alphacoders.com/934/934015.jpg"; */
+}
+
+
+
+body{
+    position: relative;
+    z-index: 11;
+    background: #30303B url("https://images2.alphacoders.com/113/113972.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+

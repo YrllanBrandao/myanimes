@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap');
+
+:root{
+    --bg-url: "https://wallpaperaccess.com/full/38130.jpg";
+}
+
+
+.p-1{
+    padding: calc(--spacer*.25);
+}
+.tag{
+    font-weight: bolder;
+    font-size: large;
+}
+.container{
+    width: 100%;
+    height: auto;
+    position: relative;
+    height: 100vh;
+    /* padding-top: 10vh; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 99;
+   
+}
+.container-fluid{
+    width: 100%;
+    height: auto;
+    
+}
+
+.mx-auto{
+    margin: 0 auto;
+}
+
+
+
+a{
+    text-decoration: none;
+    color: #E9E8E8;
+}
+body{
+    position: relative;
+    background: #30303B;
+    flex-direction: column;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    z-index: 10;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+main{
+    height: 100%;
+    width: 100%;
+}
+.anime-header{
+    position: fixed;
+    top: 10vh;
+    height: 90vh;
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+    z-index: 97;
+    background-attachment: fixed;
+}
+.anime-overlay{
+    height: 90vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0, .75) 0, #222 100%);
+    position: fixed;
+    top: 10vh;
+    z-index: 98;
+    
+}
+
+
+/* toggle */
+
+.btn-toggle{
+    width: 45px;
+    height: 45px;
+}
+
+
+/* mobile */
+@media only screen and (max-width: 768px)
+{
+    .container{
+        width: 100%;
+    }
+    main{
+        position: relative;
+    }
+}
+/* pc */
+@media only screen and (min-width: 768px)
+{
+   
+    main{
+        position: relative;
+        width: 50vw;
+        height: auto;
+        z-index: 99;
+    }
+}
+
+/* another video */
+
+.hiddenPlayer{
+    display: flex;
+    position: fixed;
+    z-index: 0;
+    transform: translateX(-500%);
+}

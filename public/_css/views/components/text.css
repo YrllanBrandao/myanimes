@@ -1,0 +1,184 @@
+/* text align*/
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+/* text decoration */
+.text-underline{
+    text-decoration: underline;
+}
+
+/* text effect */
+.text-scale{
+    font-size: initial;
+    transition: font-size 200ms ease-in-out
+}
+.text-scale:hover{
+    font-size: 102%;
+}
+/* font size */
+.fs-title {
+    font-size: 20px;
+    font-family: var(--defaultFont);
+    font-weight: 600;
+    line-height: 28px;
+}
+
+.fs-1, .fs-2, .fs-3, .fs-4, .fs-5, .fs-6 {
+    width: 100%;
+    font-weight: 400;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.fs-1 {
+    font-size: 40px;
+
+}
+
+.fs-2 {
+    font-size: 32px;
+}
+
+.fs-3 {
+    font-size: 28px;
+
+}
+
+.fs-4 {
+    font-size: 24px;
+}
+
+.fs-5 {
+    font-size: 20px;
+}
+
+.fs-6 {
+    font-size: 16px;
+}
+/* overflow */
+.overflow-clip {
+
+    text-overflow: clip;
+    /* Both of the following are required for text-overflow */
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.overflow-ellipsis {
+    text-overflow: ellipsis;
+    /* Both of the following are required for text-overflow */
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.overflow-string {
+    text-overflow: " [..]";
+    /* Both of the following are required for text-overflow */
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* direction */
+.ltr {
+    direction: ltr;
+}
+
+.rtl {
+    direction: rtl;
+}
+
+/* font weight */
+.fw-bold {
+    font-weight: bold;
+}
+
+.fw-bolder {
+    font-weight: bolder;
+}
+
+.fw-light {
+    font-weight: lighter;
+}
+
+.fw-9 {
+    font-weight: 100;
+}
+
+.fw-8 {
+    font-weight: 200;
+}
+
+.fw-7 {
+    font-weight: 300;
+}
+
+.fw-6 {
+    font-weight: 400;
+}
+
+.fw-5 {
+    font-weight: 500;
+}
+
+.fw-4 {
+    font-weight: 600;
+}
+
+.fw-3 {
+    font-weight: 700;
+}
+
+.fw-2 {
+    font-weight: 800;
+}
+
+.fw-1 {
+    font-weight: 900;
+}
+
+/* line height */
+.lh-1 {
+    line-height: 21px;
+}
+
+.lh-2 {
+    line-height: 25px;
+}
+
+.lh-3 {
+    line-height: 30px;
+}
+
+/* links */
+a {
+    text-decoration: none;
+
+}
+.link-underline {
+    text-decoration: underline;
+}
+/* extra small devices */
+@media (max-width: 575px) {}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767px) {}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {}

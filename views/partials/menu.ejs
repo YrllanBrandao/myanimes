@@ -1,0 +1,103 @@
+<header>
+    <a href="/" class="navbar-brand"></a>
+
+    <button class="btn-toggle mobile-only" data-target="navbar-id" id="menu-toggle">
+        <span id="icon-toggle" class="iconify" data-icon="eva:menu-fill" style="color: #4e31aa;" data-width="40"
+            data-height="40"></span>
+    </button>
+
+    <!--  -->
+    <ul class="nav-list align-self-center" id="navbar-id">
+
+        <a href="/" id="show" class="btn-home"></a>
+        <li class="btn-dropdown scale-shadow" data-target="animes-list" id="btn-animes">
+            Animes
+            <ul class="dropdown-list" id="animes-list">
+                <li class="radius-top"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                            d="m4 4l2 4h3L7 4h2l2 4h3l-2-4h2l2 4h3l-2-4h3q.825 0 1.413.588T22 6v12q0 .825-.588 1.413T20 20H4q-.825 0-1.413-.588T2 18V6q0-.825.588-1.413T4 4Z" />
+                    </svg>Animes Dublados</li>
+                <li class="radius-bottom"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                            d="M22 4v14c0 1.11-.89 2-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1l2 4h3L8 4h2l2 4h3l-2-4h2l2 4h3l-2-4h4M7 24h2v-2H7v2m4 0h2v-2h-2v2m4 0h2v-2h-2v2Z" />
+                    </svg>Animes Legendados</li>
+            </ul>
+        </li>
+        <li class="btn-dropdown d-flex scale-shadow" data-target="movies-list" id="btn-movies">
+            Filmes
+
+            <ul class="dropdown-list" id="movies-list">
+
+                <li class="radius-top "><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                            d="m4 4l2 4h3L7 4h2l2 4h3l-2-4h2l2 4h3l-2-4h3q.825 0 1.413.588T22 6v12q0 .825-.588 1.413T20 20H4q-.825 0-1.413-.588T2 18V6q0-.825.588-1.413T4 4Z" />
+                    </svg>Filmes Dublados</li>
+                <li class="radius-bottom"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                            d="M22 4v14c0 1.11-.89 2-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1l2 4h3L8 4h2l2 4h3l-2-4h2l2 4h3l-2-4h4M7 24h2v-2H7v2m4 0h2v-2h-2v2m4 0h2v-2h-2v2Z" />
+                    </svg>Filmes Legendados</li>
+            </ul>
+        </li>
+        <a href="/random" class="d-flex align-self-center btn-random"></a>
+
+        <li class="d-flex align-items-center justify-content-center">
+
+            <span id="search-icon">
+
+            </span>
+            <span class="mobile-only light ">Pesquisar</span>
+
+
+
+
+        </li>
+        <%- include("./search.ejs") %>
+
+        <% if(logged) {%>
+            <li class="btn-dropdown" data-target="profile-options">
+                <img src="<%= profileUrl%>" alt="profile picture" class="menu-profile">
+                <!-- options -->
+                <ul class="dropdown-list" id="profile-options">
+
+                    <li class="radius-top  ">
+                      <a href="/profile" class="d-flex justify-content-start align-items-center container-fluid">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="#4e31aa" d="M12 19.2c-2.5 0-4.71-1.28-6-3.2c.03-2 4-3.1 6-3.1s5.97 1.1 6 3.1a7.232 7.232 0 0 1-6 3.2M12 5a3 3 0 0 1 3 3a3 3 0 0 1-3 3a3 3 0 0 1-3-3a3 3 0 0 1 3-3m0-3A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10c0-5.53-4.5-10-10-10Z"/></svg>
+                        
+                        <span class="text-light hover-secondary">Minha conta</span>
+                      </a>
+                    </li>
+                    <li class="radius-bottom"> 
+                      <a href="/logout" class="d-flex justify-content-start align-items-center container-fluid">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="#4e31aa" d="M9.8 16.275q-.3-.3-.288-.725t.313-.725L11.65 13H4q-.425 0-.713-.288T3 12q0-.425.288-.713T4 11h7.65L9.8 9.15q-.3-.3-.3-.713t.3-.712q.3-.3.713-.3t.712.3L14.8 11.3q.15.15.213.325t.062.375q0 .2-.062.375t-.213.325l-3.6 3.6q-.275.275-.687.275t-.713-.3ZM5 21q-.825 0-1.413-.588T3 19v-3q0-.425.288-.713T4 15q.425 0 .713.288T5 16v3h14V5H5v3q0 .425-.288.713T4 9q-.425 0-.713-.288T3 8V5q0-.825.588-1.413T5 3h14q.825 0 1.413.588T21 5v14q0 .825-.588 1.413T19 21H5Z"/></svg>
+                        <span class="text-light hover-secondary">Sair da conta</span>
+                      </a>
+                    </li>
+                </ul>
+            </li>
+            
+            <%} %>
+                <% if(logged===false) { %>
+                    <li class="d-flex gap justify-content-center align-items-center flex-column">
+                        <a href="/login"
+                            class="d-flex flex-column align-items-center justify-content-center text-center link-light"
+                            id="btn-login">Entrar</a>
+                        <!--  -->
+                        <a href="/register"
+                            class="btn btn-theme d-flex align-items-center justify-content-center light px-3">
+                            <span class="iconify" data-icon="ph:user-circle-plus" style="color: #e9e8e8;"
+                                data-height="30" data-width="30"></span>
+                            <span>
+                                Criar conta
+                            </span>
+                        </a>
+                    </li>
+                    <% } %>
+
+    </ul>
+
+
+</header>

@@ -1,0 +1,162 @@
+
+
+/* colors */
+.success{
+    color: #21a76e;
+}
+.danger{
+    color: #980208;
+}
+.warning{
+    color: #ffd800;
+}
+.info{
+    color: #1078e2;
+}
+.dark{
+    color: #191825;
+}
+.light{
+    color: #E9E8E8;
+}
+/* borders */
+.border{
+    border: 1px solid #0bb64d;
+}
+.border-success{
+    border: 1px solid #21a76e;
+}
+.border-danger{
+    border: 1px solid  #980208;
+}
+.border-warning{
+    border: 1px solid #ffd800;
+}
+.border-info{
+    border: 1px solid #1078e2;
+}
+.border-dark{
+    border: 1px solid #191825;
+}
+.border-light{
+    border: 1px solid #FFFFFF;
+}
+
+/* backgrounds colors */
+.bg-success{
+    background: #0bb64d;
+}
+.bg-info{
+    background: #1078e2;
+}
+.bg-light{
+    background: #FFFFFF;
+}
+.bg-dark{
+    background: #191825;
+
+}
+.bg-dark-drop{
+    background: #5e5c776b;
+    backdrop-filter: blur(2px);
+}
+.bg-theme{
+    background: #4E31AA;
+    color: #E9E8E8;
+}
+.bg-theme:hover{
+    background: #3A1078;
+}
+
+/* LINKS */
+
+
+.link-success {
+    color: #980208;
+}
+
+.link-info {
+    color: #1078e2;
+}
+
+.link-warning {
+    color: #ffd800;
+}
+
+.link-dark {
+    color: #191825;
+}
+
+.link-light {
+    color: #E9E8E8;
+}
+.link-white{
+    color: #fff;
+}
+.link-light:hover {
+    color: #2c2c2c;
+}
+
+.link-theme {
+    color: #4E31AA;
+}
+
+.link-theme:hover {
+    color: #300e63;
+}
+
+
+
+/* text color */
+.text-white{
+    color: #FFFFFF;
+}
+.text-light {
+    color: #ccc;
+}
+.text-theme{
+    color: #4E31AA;
+}
+
+.text-success {
+    color: #980208;
+}
+
+.text-info {
+    color: #1078e2;
+}
+
+.text-warning {
+    color: #ffd800;
+}
+.text-dark{
+    color: #191825;
+}
+.text-black{
+    color: #000;
+}
+
+.text-secondary{
+    color: var(--color-theme-secondary);
+}
+/* text/link hover */
+.hover-theme:hover{
+    color: var(--color-theme);
+}
+.hover-secondary:hover{
+    color: var(--color-theme-secondary);
+}
+/* text decoration color */
+
+.decoration-theme{
+    text-decoration-color: var(--color-theme);
+}
+.decoration-black{
+    text-decoration-color: #000;
+}
+.decoration-white{
+    text-decoration-color: #FFF;
+}
+.decoration-light{
+    text-decoration-color: #E9E8E8;
+}
