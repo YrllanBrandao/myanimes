@@ -12,6 +12,7 @@
 @import url("./components/button.css");
 @import url("./components/preloading.css");
 @import url('./components/form.css');
+@import url('./components/position.css');
 
 * {
     margin: 0;
@@ -25,27 +26,6 @@ a {
 }
 
 
-#progress {
-	position: fixed;
-	z-index: 1;
-	top: 0;
-	left: -6px;
-	width: 1%;
-	height: 6px;
-  background-color: #4e31aa;
-  
-  -moz-border-radius: 1px;
-	-webkit-border-radius: 1px;
-	border-radius: 1px;
-
-  -moz-transition: width 600ms ease-out,opacity 500ms linear;
-	-ms-transition: width 600ms ease-out,opacity 500ms linear;
-	-o-transition: width 600ms ease-out,opacity 500ms linear;
-	-webkit-transition: width 600ms ease-out,opacity 500ms linear;
-	transition: width 1000ms ease-out,opacity 500ms linear;
-  
-
-}
 
 .hr{
     margin-top: 2px;
@@ -72,13 +52,13 @@ ul, ol {
 }
 /* overlay */
 .overlay {
-    height: var(--vh);
+    height: 100vh;
     width: 100vw;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.192) 0, #222 100%);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.397) 0, #222 100%);
     backdrop-filter: blur(2px);
     position: fixed;
     z-index: 4 !important;
-
+    top: 0;
 }
 
 .bg-overlay {

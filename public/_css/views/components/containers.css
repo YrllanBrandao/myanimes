@@ -2,7 +2,7 @@
 .container-one-view{
     width: 100vw;
     z-index: 11 !important;
-    height: 100vh;
+    height: 100vh ;
 }
 .container-fluid{
     width: 100%;    

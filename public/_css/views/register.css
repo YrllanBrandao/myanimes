@@ -1,11 +1,7 @@
 @import url("./components/variables.css");
 
-:root{
-    --bg-url: "https://images8.alphacoders.com/932/932872.jpg";
-}
-
 body{
-    background: #30303B url("https://images8.alphacoders.com/932/932872.jpg");
+    background: #30303B url("../../_images/register.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: right;

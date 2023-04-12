@@ -1,10 +1,6 @@
-:root{
-    --bg-url: "https://images6.alphacoders.com/636/636022.jpg"
-    /* --bg-url: "https://images8.alphacoders.com/128/1283309.jpg"; */
-}
 
 body {
-    background: #30303B url('https://images6.alphacoders.com/636/636022.jpg');
+    background: #30303B url('../_images/home.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
