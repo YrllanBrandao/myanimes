@@ -12,19 +12,7 @@ class Controller {
             profileUrl: profile.profileUrl
         });
     }
-    async random(req, res)
-    {
-        const profile = await Logged(req);
-        const ANIMES = await Animes.findAll();
-        
-      
-            res.render("random", {
-                animes:  ANIMES,
-                logged: profile.logged,
-                profileUrl: profile.profileUrl
-                
-            });
-    }
+   
     async adminArea(req, res)
     {
         const profile = await Logged(req);

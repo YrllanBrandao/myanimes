@@ -63,6 +63,23 @@ class Anime{
 
   }
 
+  async getRandom(req, res)
+  {
+    const profile = await Logged(req);
+        const ANIMES = await Animes.findAll();
+        const maxLength = ANIMES.length;
+        const index = Math.floor(Math.random()*maxLength + 1);
+        const randomizedAnime = ANIMES.find(element => element.id === index);
+        console.log(randomizedAnime, "<===")
+            res.render("random", {
+                anime:  randomizedAnime,
+                logged: profile.logged,
+                profileUrl: profile.profileUrl
+                
+            });
+   
+
+  }
 
 }
 

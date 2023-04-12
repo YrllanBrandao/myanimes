@@ -17,7 +17,7 @@ router.get("/admin-area", Controller.adminArea);
 router.get("/admin-area/anime-register", Anime.animeIndex);
 router.post("/admin-area/anime", Anime.registerAnime)
 // animes routes
-router.get("/random", Controller.random);
+router.get("/random", Anime.getRandom);
 router.get("/anime", Anime.getEpisode);
 
 // user routes
