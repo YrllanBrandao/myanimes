@@ -6,6 +6,7 @@
 
 <br />
 
+This project is a local plataform for watch your favourites Animes
 ---
 
 <br />
